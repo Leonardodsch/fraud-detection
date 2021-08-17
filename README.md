@@ -40,7 +40,7 @@ O conjunto de dados que será utilizado para criar a solução está disponível
 
 Cada linha representa um cliente e cada coluna contém alguns atributos que descrevem esse cliente. O conjunto de dados inclui informações sobre:
 
-- **step** - maps a unit of time in the real world. In this case 1 step is 1 hour of time. Total steps 744 (30 days simulation).
+- **step** - mapeia uma unidade de tempo no mundo real. Neste caso, 1 etapa corresponde a 1 hora de tempo. Total de etapas 744 (simulação de 30 dias).
 
 - **type** - CASH-IN, CASH-OUT, DEBIT, PAYMENT and TRANSFER.
 
