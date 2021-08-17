@@ -40,24 +40,24 @@ O conjunto de dados que será utilizado para criar a solução está disponível
 
 Cada linha representa um cliente e cada coluna contém alguns atributos que descrevem esse cliente. O conjunto de dados inclui informações sobre:
 
-**step** - maps a unit of time in the real world. In this case 1 step is 1 hour of time. Total steps 744 (30 days simulation).
+- **step** - maps a unit of time in the real world. In this case 1 step is 1 hour of time. Total steps 744 (30 days simulation).
 
-**type** - CASH-IN, CASH-OUT, DEBIT, PAYMENT and TRANSFER.
+- **type** - CASH-IN, CASH-OUT, DEBIT, PAYMENT and TRANSFER.
 
-**amount** - valor da transação em moeda local.
+- **amount** - valor da transação em moeda local.
 
-**nameOrig** - cliente que iniciou a transação
+- **nameOrig** - cliente que iniciou a transação
 
-**oldbalanceOrg** - saldo inicial antes da transação
+- **oldbalanceOrg** - saldo inicial antes da transação
 
-**newbalanceOrig** - saldo após a transação
+- **newbalanceOrig** - saldo após a transação
 
-**nameDest** - cliente que é o destinatário da transação
+- **nameDest** - cliente que é o destinatário da transação
 
-**oldbalanceDest** - destinatário do saldo inicial antes da transação. Observe que não há informações para clientes que começam com M (Merchants).
+- **oldbalanceDest** - destinatário do saldo inicial antes da transação. Observe que não há informações para clientes que começam com M (Merchants).
 
-**newbalanceDest** - novo destinatário do saldo após a transação. Observe que não há informações para clientes que começam com  M (Merchants).
+- **newbalanceDest** - novo destinatário do saldo após a transação. Observe que não há informações para clientes que começam com  M (Merchants).
 
-**isFraud** - São as transações feitas pelos agentes fraudulentos dentro da simulação. Neste conjunto de dados específico, o comportamento fraudulento dos agentes visa lucrar ao assumir o controle das contas dos clientes e tentar esvaziar os fundos transferindo para outra conta e retirando do sistema.
+- **isFraud** - São as transações feitas pelos agentes fraudulentos dentro da simulação. Neste conjunto de dados específico, o comportamento fraudulento dos agentes visa lucrar ao assumir o controle das contas dos clientes e tentar esvaziar os fundos transferindo para outra conta e retirando do sistema.
 
-**isFlaggedFraud** - O modelo de negócios visa controlar as transferências em massa de uma conta para outra e sinaliza tentativas ilegais. Uma tentativa ilegal neste conjunto de dados é uma tentativa de transferir mais de 200.000 em uma única transação.
+- **isFlaggedFraud** - O modelo de negócios visa controlar as transferências em massa de uma conta para outra e sinaliza tentativas ilegais. Uma tentativa ilegal neste conjunto de dados é uma tentativa de transferir mais de 200.000 em uma única transação.
