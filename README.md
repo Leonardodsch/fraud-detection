@@ -54,9 +54,9 @@ Cada linha representa um cliente e cada coluna contém alguns atributos que desc
 
 - **nameDest** - cliente que é o destinatário da transação
 
-- **oldbalanceDest** - destinatário do saldo inicial antes da transação. Observe que não há informações para clientes que começam com M (Merchants).
+- **oldbalanceDest** - saldo inicial  do destinatário antes da transação. Observe que não há informações para clientes que começam com M (Merchants).
 
-- **newbalanceDest** - novo destinatário do saldo após a transação. Observe que não há informações para clientes que começam com  M (Merchants).
+- **newbalanceDest** - novo saldo do destinatário após a transação. Observe que não há informações para clientes que começam com  M (Merchants).
 
 - **isFraud** - São as transações feitas pelos agentes fraudulentos dentro da simulação. Neste conjunto de dados específico, o comportamento fraudulento dos agentes visa lucrar ao assumir o controle das contas dos clientes e tentar esvaziar os fundos transferindo para outra conta e retirando do sistema.
 
