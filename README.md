@@ -4,6 +4,11 @@
 
 Disclaimer: O Contexto a seguir, é completamente fictício, a empresa, o contexto, as perguntas de negócio foram criadas apenas para o desenvolvimento do projeto, e se baseiam em um projeto do site https://sejaumdatascientist.com/.
 
+<p align="center">
+  <img width="750" height="400" src="https://user-images.githubusercontent.com/76128123/131386727-16ac418e-ff8e-4f79-b541-f633861a9af1.png"/>
+</p>
+
+
 ## Contexto de negócio 
 
 A Blocker Fraude Company é uma empresa especializada na detecção de fraudes em transações financeiras feitas através de dispositivos móveis. A empresa tem um serviço chamado “Blocker Fraud” no qual garante o bloqueio de transações fraudulentas.
@@ -127,7 +132,9 @@ Os algoritmos utilizados para fazer a predição foram:
 
 Após a realização dos testes com todos os algoritmos e verificação das métricas de performnace, verificou-se um melhor desempenho nos algoritmos baseados em árvores, então a decisão foi por usar o algoritmo LightGBM pois é um algoritmo leve e rápido que se mostrou muito eficiente com uma performance muito satisfatória.
 
-As métricas utilizadas para esse problema foram Acurácia balanceada, Precision, Recall e F1-Score. Como se tratava de um problema com os dados de uma natureza muito desbalanceda a métrica Acurácia não seria a mais adequada de ser analisada, pois daria a falsa impressão de um bom desempenho do modelo. Sendo assim, de acordo com as questões de negócio e buscando otimizar os lucros da empresa a métrica analisada com mais cuidado foi o Recall, que é capaz de indicar a capacidade do modelo de acertar as transações detectadas como fraudulentas. A métrica precision também foi considerada para que ambas não tivessem valores muito distantes e assim fizessem que o modelo de uma maneira geral não tivesse uma boa performance. Os resultados da performance do modelo LightGBM podem ser conferidos abaixo, juntamente com a matriz de confusão que mostra a relação entre os valores reais e aqueles encontrados pelo modelo.
+As métricas utilizadas para esse problema foram Acurácia balanceada, Precision, Recall e F1-Score. Como se tratava de um problema com os dados de uma natureza muito desbalanceda a métrica Acurácia não seria a mais adequada de ser analisada, pois daria a falsa impressão de um bom desempenho do modelo. Sendo assim, de acordo com as questões de negócio e buscando otimizar os lucros da empresa a métrica analisada com mais cuidado foi o Recall, que é capaz de indicar a capacidade do modelo de acertar as transações detectadas como fraudulentas. A métrica precision também foi considerada para que ambas não tivessem valores muito distantes e assim fizessem que o modelo de uma maneira geral não tivesse uma boa performance. 
+
+Os resultados da performance do modelo LightGBM podem ser conferidos abaixo, juntamente com a matriz de confusão que mostra a relação entre os valores reais e aqueles encontrados pelo modelo.
 
 ![image](https://user-images.githubusercontent.com/76128123/131374854-0fb36308-327a-4929-8d59-ffb06d703d20.png)
 
@@ -137,6 +144,42 @@ As métricas utilizadas para esse problema foram Acurácia balanceada, Precision
 
 ## Resultados
 
+### Perguntas de Negócio
 
+**1. Qual a Precisão e Acurácia do modelo?**
+
+O modelo possui uma acurácia de 93% e uma precisão de 83%. Deve-se levar em consideração que para esse tipo de problema a métrica acurácia não é a mais indicada, pois como temos um problema de natureza desbalanceada a acurácia não irá mostrar o real desempenho do modelo. Para uma análise correta devemos observar os resultados das métricas Precision e Recall, e considerá-las de acordo com o problema de negócio.
+
+
+**2. Qual a Confiabilidade do modelo em classificar as transações como legítimas ou fraudulentas?**
+
+O modelo possui uma taxa de acerto de 83% para as transações detectadas como fraudulentas, com uma capacidade de acertar 85% em casos que uma transação é de fato fraudulenta.
+
+
+**3. Qual o Faturamento Esperado pela Empresa se classificarmos 100% das transações com o modelo?**
+
+Para fazer essa estimativa de valores vamos utilizar as seguintes premissas de negócio definidas no começo do projeto:
+
+- A empresa vai receber 25% do valor de cada transação detectada verdadeiramente como fraude.
+- A empresa vai receber 5% do valor de cada transação detectada como fraude, porém a transação é verdadeiramente legítima.
+- A empresa vai devolver 100% do valor para o cliente, a cada transação detectada como legítima, porém a transação é verdadeiramente uma fraude.
+
+Com essas condições é possível calcular o retorno finaceiro a partir das predições do modelo. Para o cálculo foi utilizada uma amostra de 63627 transações.
+
+O faturamento esperado pela empresa é de **$25.522.181,26**
+
+ 
+ **4.  Qual o Prejuízo Esperado pela Empresa em caso de falha do modelo?**
+ 
+ O prejuízo esperado em caso de falha do modelo é de **$1.507.218,51**
+ 
+ 
+ **5. Qual o Lucro Esperado pela Blocker Fraud Company ao utilizar o modelo?**
+ 
+ O lucro esperado pela empresa ao utilizar modelo é de **$24.014.962,75**
 
 ## Conclusões
+
+A partir do problema proposto das perguntas de negócio, e do estudo e entendimento dos dados foi possível desenvolver uma solução usando algoritmos de machine learning para detectar se uma determinada transação seria ou não fraudulenta. Como restultado do projeto foi possível calcular o retorno finaceiro para empresa e verificar que com a utlização do modelo de detecção haveria uma grande capacidade de melhoria no serviço, sendo possível evitar com uma maior precisão possíveis fraudes e assim gerar um retorno financeiro maior para a empresa e uma melhor experiência para os usuários. Se tratando de um problema que envolve diretamente o dinheiro dos clientes é sempre muito importante a empresa ter a capacidade de detectar rápida e precisamente tentativas de fraude, para que qualquer dano maior seja evitado ou pelo menos minimizado, por isso um estudo dos dados e a aplicação de técnicas de inteligência artificial se mostram uma ferramenta essencial nesse tipo de problema de negócio. Soluções baseadas em dados podem se tornar uma vantagem competitiva se usadas de forma estratégica e inteligente, fazendo com que empresas que utilizem dessas técnicas possam prestar serviços cada vez melhores e levar um produto seguro e de qualidade para os clientes.
+
+Como possíveis melhorias para esse projeto seria interessante a obtenção de mais dados sobre o fenômeno, para que uma análise ainda mais completa seja feita e outras abordagens possam ser testadas com os algoritmos de machine learning e possívelmente, com mais dados disponiveis, melhores resultados sejam obtidos. 
