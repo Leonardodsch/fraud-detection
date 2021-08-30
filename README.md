@@ -1,4 +1,4 @@
-Link para o notebook através do nbviewer (Recomendado para uma melhor visualização): https://nbviewer.jupyter.org/github/Leonardodsch/fraud-detection/blob/main/notebooks/cycle06-business_performance.ipynb
+- Link para o notebook através do nbviewer (Recomendado para uma melhor visualização): https://nbviewer.jupyter.org/github/Leonardodsch/fraud-detection/blob/main/notebooks/cycle06-business_performance.ipynb
 
 # Financial Fraud Detection
 
@@ -115,6 +115,28 @@ O projeto utiliza a metodologia CRISP-DM, que consiste desenvolver o projeto de 
 
 ## Machine Learning Models
 
+Os algoritmos utilizados para fazer a predição foram:
+
+- Modelo Dummy Clisifier para que fosse possível ter um modelo base de comparação,
+- Logistic Regression;
+- KNN;
+- LightGBM Classifier;
+- AdaBoost Classifier;
+- Random Forest Classifier;
+- XGBoost Classifier.
+
+Após a realização dos testes com todos os algoritmos e verificação das métricas de performnace, verificou-se um melhor desempenho nos algoritmos baseados em árvores, então a decisão foi por usar o algoritmo LightGBM pois é um algoritmo leve e rápido que se mostrou muito eficiente com uma performance muito satisfatória.
+
+As métricas utilizadas para esse problema foram Acurácia balanceada, Precision, Recall e F1-Score. Como se tratava de um problema com os dados de uma natureza muito desbalanceda a métrica Acurácia não seria a mais adequada de ser analisada, pois daria a falsa impressão de um bom desempenho do modelo. Sendo assim, de acordo com as questões de negócio e buscando otimizar os lucros da empresa a métrica analisada com mais cuidado foi o Recall, que é capaz de indicar a capacidade do modelo de acertar as transações detectadas como fraudulentas. A métrica precision também foi considerada para que ambas não tivessem valores muito distantes e assim fizessem que o modelo de uma maneira geral não tivesse uma boa performance. Os resultados da performance do modelo LightGBM podem ser conferidos abaixo, juntamente com a matriz de confusão que mostra a relação entre os valores reais e aqueles encontrados pelo modelo.
+
+![image](https://user-images.githubusercontent.com/76128123/131374854-0fb36308-327a-4929-8d59-ffb06d703d20.png)
+
+<p align="center">
+  <img width="550" height="400" src="https://user-images.githubusercontent.com/76128123/131375413-d95968b7-4440-410d-a9b9-6e96f05c6c59.png"/>
+</p>
+
 ## Resultados
+
+
 
 ## Conclusões
