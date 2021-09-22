@@ -1,4 +1,6 @@
-- Link para o notebook através do nbviewer (Recomendado para uma melhor visualização): https://nbviewer.jupyter.org/github/Leonardodsch/fraud-detection/blob/main/notebooks/cycle06-business_performance.ipynb
+- Link para o notebook através do nbviewer (Recomendado para uma melhor visualização):
+
+[![image](https://img.shields.io/badge/Jupyter-F37626.svg?&style=for-the-badge&logo=Jupyter&logoColor=white)](https://nbviewer.jupyter.org/github/Leonardodsch/fraud-detection/blob/main/notebooks/cycle06-business_performance.ipynb)
 
 # Financial Fraud Detection
 
